@@ -29,7 +29,7 @@ exports.postAddProduct = (req, res, next) => {
     })
 };
 
-exports.getEditProduct = (req, res, next) => {
+/* exports.getEditProduct = (req, res, next) => {
     const editMode = req.query.edit;
     if (!editMode) {
         return res.redirect('/');
@@ -51,9 +51,9 @@ exports.getEditProduct = (req, res, next) => {
     })
     .catch(err => 
         console.log(err));
-};
+}; */
 
-exports.postEditProduct = (req, res, next) => {
+/* exports.postEditProduct = (req, res, next) => {
     const prodId = req.body.productId;
     const updatedTitle = req.body.title;
     const updatedImageUrl = req.body.imageUrl;
@@ -73,7 +73,7 @@ exports.postEditProduct = (req, res, next) => {
             res.redirect('/admin/products');
         })
         .catch(err => console.log(err));
-    };
+    }; */
 
 exports.getProducts = (req, res, next) => {
     req.user.getProducts()

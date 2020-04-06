@@ -63,7 +63,8 @@ exports.postCart = (req, res, next) => {
     })
     .then(result => {
         console.log(result);
-    })
+        res.redirect('/cart');
+    });
 
 /*     let fetchedCart;
     let newQuantity = 1;

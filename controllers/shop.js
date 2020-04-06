@@ -88,7 +88,8 @@ exports.postOrder = (req, res, next) => {
 }
 
 exports.getOrders = (req, res, nect) => {
-    req.user.getOrders({include: ['products']})
+    req.user
+    .getOrders()
     .then(orders => {
         res.render('shop/orders', {
             path: '/orders',
